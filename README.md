@@ -1,5 +1,3 @@
-pip install -r requirements.txt
-pip install scikit-learn
 
 🚀 Excited to share my latest project: a Height-Weight Prediction Model! 📊
 
