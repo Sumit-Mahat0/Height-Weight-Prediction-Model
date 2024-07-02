@@ -1,3 +1,6 @@
+pip install -r requirements.txt
+pip install scikit-learn
+
 🚀 Excited to share my latest project: a Height-Weight Prediction Model! 📊
 
 I've built a predictive model that accurately estimates weight based on input height. Leveraging machine learning algorithms and Python, this project showcases my skills in data preprocessing, feature engineering, model training, and evaluation. It's fascinating to see how data-driven insights can enhance decision-making processes and drive impactful results.
