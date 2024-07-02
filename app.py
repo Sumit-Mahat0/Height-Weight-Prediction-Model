@@ -1,6 +1,7 @@
 import pickle
 import numpy as np
 import streamlit as st
+from sklearn.preprocessing import StandardScaler
 
 # Load the saved model from the file
 filename = 'final_model.pkl'
@@ -44,14 +45,11 @@ height_input = st.number_input("Enter the height in feet:", value=default_height
 
 # Predict button
 if st.button('Predict'):
-    try:
-        # Reshape the input height to match the shape expected by the model (2D array)
-        height_input_2d = np.array(height_input).reshape(1, -1)
+    # Reshape the input height to match the shape expected by the model (2D array)
+    height_input_2d = np.array(height_input).reshape(1, -1)
 
-        # Use the loaded model to make predictions
-        predicted_weight = loaded_model.predict(height_input_2d)
+    # Use the loaded model to make predictions
+    predicted_weight = loaded_model.predict(height_input_2d)
 
-        # Print the predicted weight
-        st.markdown(f'<p class="prediction">Predicted weight: {predicted_weight[0][0]:.2f} kg</p>', unsafe_allow_html=True)
-    except Exception as e:
-        st.error(f"An error occurred: {e}")
+    # Print the predicted weight
+    st.markdown(f'<p class="prediction">Predicted weight: {predicted_weight[0, 0]} kg</p>', unsafe_allow_html=True)
