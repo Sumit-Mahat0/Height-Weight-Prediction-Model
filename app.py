@@ -1,7 +1,6 @@
 import pickle
 import numpy as np
 import streamlit as st
-from sklearn.preprocessing import StandardScaler
 
 # Load the saved model from the file
 filename = 'final_model.pkl'
